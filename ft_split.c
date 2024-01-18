@@ -6,23 +6,11 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 10:16:20 by sdell-er          #+#    #+#             */
-/*   Updated: 2023/10/17 11:11:16 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/01/17 17:06:38 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-struct s_ogg
-{
-	int		i;
-	int		cont;
-	int		indice;
-	int		opz;
-	int		ottenuto;
-	int		poss;
-	char	*str;
-	char	charset;
-};
 
 int	if_else_while(struct s_ogg *o)
 {

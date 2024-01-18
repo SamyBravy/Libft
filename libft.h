@@ -6,7 +6,7 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 10:30:51 by sdell-er          #+#    #+#             */
-/*   Updated: 2023/10/18 14:40:58 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/01/17 17:06:46 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+struct s_ogg
+{
+	int		i;
+	int		cont;
+	int		indice;
+	int		opz;
+	int		ottenuto;
+	int		poss;
+	char	*str;
+	char	charset;
+};
 
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
