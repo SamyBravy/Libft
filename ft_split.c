@@ -6,7 +6,7 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 10:16:20 by sdell-er          #+#    #+#             */
-/*   Updated: 2024/01/17 17:06:38 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/01/20 20:00:53 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,16 @@ void	riempi(char *dest, char *str, int start, int fine)
 	dest[i] = '\0';
 }
 
+int	free_mat(char ***mat, int i)
+{
+	if ((*mat)[i] == NULL)
+	{
+		free(*mat);
+		return (1);
+	}
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		parole;
@@ -94,7 +104,7 @@ char	**ft_split(char const *s, char c)
 		mat[i] = malloc(sizeof(char)
 				* (opz_parola(str, i, c, 3)
 					- opz_parola(str, i, c, 2) + 2));
-		if (mat[i] == NULL)
+		if (free_mat(&mat, i))
 			return (NULL);
 		riempi(mat[i], str, opz_parola(str, i, c, 2),
 			opz_parola(str, i, c, 3));
