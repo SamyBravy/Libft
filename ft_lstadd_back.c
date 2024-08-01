@@ -6,7 +6,7 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:37:48 by sdell-er          #+#    #+#             */
-/*   Updated: 2023/10/16 19:51:25 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/08/01 20:04:43 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (!new)
+	if (!new || !lst)
 		return ;
 	if (!*lst)
 	{

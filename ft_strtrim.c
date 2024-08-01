@@ -45,6 +45,16 @@ int	new_dim(int fine, char const *set, char const *s1)
 	return (j);
 }
 
+int	calculate_i(char const *s1, char const *set)
+{
+	int	i;
+
+	i = ft_strlen(s1) - 1;
+	while (i >= 0 && present(set, s1[i]))
+		i--;
+	return (i);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		fine;
@@ -53,9 +63,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		poss;
 	char	*new;
 
-	i = ft_strlen(s1) - 1;
-	while (i >= 0 && present(set, s1[i]))
-		i--;
+	if (!s1 || !set)
+		return (NULL);
+	i = calculate_i(s1, set);
 	fine = i + 1;
 	i = -1;
 	j = 0;

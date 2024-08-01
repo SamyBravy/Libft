@@ -6,7 +6,7 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 19:05:51 by sdell-er          #+#    #+#             */
-/*   Updated: 2023/10/17 11:48:20 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/08/01 20:14:12 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	sl;
 	size_t	dl;
 
+	if (!dst && !src)
+		return (0);
 	sl = ft_strlen(src);
 	if (size == 0)
 		return (sl);

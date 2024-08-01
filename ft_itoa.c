@@ -66,7 +66,7 @@ char	*ft_itoa(int n)
 	}
 	str = body_itoa(&neg, n, l);
 	if (!str)
-		return (NULL);
+		return (free(str), NULL);
 	return (str);
 }
 // int main()
