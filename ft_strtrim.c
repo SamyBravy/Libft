@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	present(const char *set, char c)
+static int	present(const char *set, char c)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ int	present(const char *set, char c)
 	return (0);
 }
 
-int	new_dim(int fine, char const *set, char const *s1)
+static int	new_dim(int fine, char const *set, char const *s1)
 {
 	int	i;
 	int	j;
@@ -45,7 +45,7 @@ int	new_dim(int fine, char const *set, char const *s1)
 	return (j);
 }
 
-int	calculate_i(char const *s1, char const *set)
+static int	calculate_i(char const *s1, char const *set)
 {
 	int	i;
 

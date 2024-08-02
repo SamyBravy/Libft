@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*body_itoa(int *neg, int n, int l)
+static char	*body_itoa(int *neg, int n, int l)
 {
 	int			i;
 	char		*str;
