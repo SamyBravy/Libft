@@ -6,13 +6,13 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 10:16:20 by sdell-er          #+#    #+#             */
-/*   Updated: 2024/01/20 20:00:53 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/08/02 11:54:38 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	if_else_while(struct s_ogg *o)
+static int	if_else_while(struct s_ogg *o)
 {
 	if (o->str[o->i] != o->charset)
 	{
@@ -33,7 +33,7 @@ int	if_else_while(struct s_ogg *o)
 	return (-42);
 }
 
-int	opz_parola(char *str, int indice, char charset, int opz)
+static int	opz_parola(char *str, int indice, char charset, int opz)
 {
 	int				ret;
 	struct s_ogg	o;
@@ -60,7 +60,7 @@ int	opz_parola(char *str, int indice, char charset, int opz)
 	return (o.i - 1);
 }
 
-void	riempi(char *dest, char *str, int start, int fine)
+static void	riempi(char *dest, char *str, int start, int fine)
 {
 	int	i;
 
@@ -74,7 +74,7 @@ void	riempi(char *dest, char *str, int start, int fine)
 	dest[i] = '\0';
 }
 
-int	free_mat(char ***mat, int i)
+static int	free_mat(char ***mat, int i)
 {
 	if ((*mat)[i] == NULL)
 	{
